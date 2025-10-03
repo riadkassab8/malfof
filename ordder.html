@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مسمط وكوارع السيدة زينب | قائمة الطعام</title>
+    <meta
+      name="description"
+      content="مسمط وكوارع السيدة زينب يقدم ألذ الكوارع والمأكولات المصرية الأصيلة. تصفح قائمتنا واطلب أونلاين أو تواصل معنا مباشرة."
+    />
+    <meta name="keywords" content="مسمط, كوارع, السيدة زينب, مطعم, أكل مصري, طواجن, شوربة كوارع, منيو, اطلب اونلاين" />
+    <meta name="author" content="Eng/riad kassab" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="مسمط وكوارع السيدة زينب | قائمة الطعام" />
+    <meta property="og:description" content="أشهى الكوارع والأكلات المصرية في السيدة زينب. اطلب أونلاين أو تواصل معنا الآن." />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/orderStyle.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.png" alt="مسمط وكوارع السيدة زينب" />
+      </div>
+    </div>
+
+    <!-- carousel -->
+    <section>
+      <div class="container">
+        <div class="slider">
+          <span class="counter" id="counter">1 / 3</span>
+          <button class="nav-btn prev" onclick="prevSlide()">&#60;</button>
+          <img id="slide" src="images/529d6f65-2671-49e0-a615-2515d0b3b468.jpg" alt="slide" />
+          <button class="nav-btn next" onclick="nextSlide()">&#62;</button>
+          <br />
+          <a href="#" class="order-btn">اطلب الآن</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-white">
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+          <span>تابعنا على:</span>
+        </div>
+        <div class="links">
+          <a href="#" class="me-4 text-reset"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/201000000000" class="me-4 text-reset"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </section>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">© 2025 جميع الحقوق محفوظة | تصميم: Eng/riad kassab</div>
+    </footer>
+
+    <script>
+      const images = ["images/529d6f65-2671-49e0-a615-2515d0b3b468.jpg", "images/OIP.webp", "images/اكلات-شتوية-مصرية.jpg"];
+
+      let index = 0;
+
+      function updateSlide() {
+        document.getElementById("slide").src = images[index];
+        document.getElementById("counter").textContent = `${index + 1} / ${images.length}`;
+      }
+
+      function nextSlide() {
+        index = (index + 1) % images.length;
+        updateSlide();
+      }
+
+      function prevSlide() {
+        index = (index - 1 + images.length) % images.length;
+        updateSlide();
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
