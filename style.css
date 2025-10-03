@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+/* Header bar */
+.header {
+  background: #004aad;
+  height: 60px;
+  position: relative;
+}
+
+/* Circle logo */
+.logo {
+  font-size: 20px;
+  width: 150px;
+  height: 150px;
+  background: #004aad;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.main_sec {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for buttons */
+.main_buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-gap: 40px;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+}
+
+.btn {
+  background: #004aad;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #111;
+  scale: 1.1;
+  color: #fff;
+}
+.btn a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+}
+/* Social icons */
+.social {
+  margin-top: 20px;
+}
+
+.social img {
+  width: 32px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+.links a i {
+  font-size: 1rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.links a i:hover {
+  scale: 1.1;
+  color: #004aad;
+}
