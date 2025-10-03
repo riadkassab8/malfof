@@ -1,107 +1,76 @@
-* {
-  font-family: Tajawal, sans-serif;
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #fafafa;
   margin: 0;
   padding: 0;
 }
-
 body {
-  background: #f5f5f5;
-  text-align: center;
+  padding-bottom: 80px; 
 }
 
-/* Header bar */
 .header {
-  background: #004aad;
-  height: 60px;
-  position: relative;
+  background: #8b0000;
+  text-align: center;
+  padding: 15px 0;
 }
 
-/* Circle logo */
-.logo {
-  font-size: 20px;
-  width: 150px;
-  height: 150px;
-  background: #004aad;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
+.header .logo img {
+  max-width: 120px;
 }
 
-.main_sec {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Container for buttons */
 .main_buttons {
   display: grid;
-  grid-template-columns: repeat(2, 500px);
-  grid-gap: 40px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 40px auto;
   text-align: center;
-  height: 400px;
 }
 
-.btn {
-  background: #004aad;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #111;
-  scale: 1.1;
+.main_buttons .btn a {
+  display: block;
+  background: #8b0000;
   color: #fff;
-}
-
-.btn a {
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
   text-decoration: none;
-  font-size: 2rem;
-  color: white;
 }
 
-/* Social icons */
-.social {
-  margin-top: 20px;
+.main_buttons .btn a:hover {
+  background: #b22222;
+  transform: translateY(-3px);
 }
 
-.social img {
-  width: 32px;
-  margin: 0 10px;
-  cursor: pointer;
+.main_buttons .btn a i,
+.main_buttons .btn a span {
+  display: block;
+  margin: 5px 0;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+footer .links a {
+  font-size: 22px;
   transition: 0.3s;
 }
 
-.social img:hover {
-  transform: scale(1.1);
+footer .links a:hover {
+  color: #ffcc00;
 }
 
-.links a i {
-  font-size: 1rem;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.links a i:hover {
-  scale: 1.1;
-  color: #004aad;
+.text-footer{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 0;
+  color: #b22222;
+  text-decoration: none;
 }
